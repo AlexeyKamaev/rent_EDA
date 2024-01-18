@@ -1,0 +1,709 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>474498</title>
+  <style>
+    html {
+      line-height: 1.5;
+      font-family: Georgia, serif;
+      font-size: 20px;
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 1em;
+      }
+    }
+    @media print {
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, 'Lucida Console', Consolas, monospace;
+      font-size: 85%;
+      margin: 0;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    span.underline{text-decoration: underline;}
+    div.column{display: inline-block; vertical-align: top; width: 50%;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
+    pre > code.sourceCode { white-space: pre; position: relative; }
+    pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+    pre > code.sourceCode > span:empty { height: 1.2em; }
+    .sourceCode { overflow: visible; }
+    code.sourceCode > span { color: inherit; text-decoration: inherit; }
+    div.sourceCode { margin: 1em 0; }
+    pre.sourceCode { margin: 0; }
+    @media screen {
+    div.sourceCode { overflow: auto; }
+    }
+    @media print {
+    pre > code.sourceCode { white-space: pre-wrap; }
+    pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+    }
+    pre.numberSource code
+      { counter-reset: source-line 0; }
+    pre.numberSource code > span
+      { position: relative; left: -4em; counter-increment: source-line; }
+    pre.numberSource code > span > a:first-child::before
+      { content: counter(source-line);
+        position: relative; left: -1em; text-align: right; vertical-align: baseline;
+        border: none; display: inline-block;
+        -webkit-touch-callout: none; -webkit-user-select: none;
+        -khtml-user-select: none; -moz-user-select: none;
+        -ms-user-select: none; user-select: none;
+        padding: 0 4px; width: 4em;
+        color: #aaaaaa;
+      }
+    pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+    div.sourceCode
+      {   }
+    @media screen {
+    pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+    }
+    code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+    code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+    code span.at { color: #7d9029; } /* Attribute */
+    code span.bn { color: #40a070; } /* BaseN */
+    code span.bu { } /* BuiltIn */
+    code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+    code span.ch { color: #4070a0; } /* Char */
+    code span.cn { color: #880000; } /* Constant */
+    code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+    code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+    code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+    code span.dt { color: #902000; } /* DataType */
+    code span.dv { color: #40a070; } /* DecVal */
+    code span.er { color: #ff0000; font-weight: bold; } /* Error */
+    code span.ex { } /* Extension */
+    code span.fl { color: #40a070; } /* Float */
+    code span.fu { color: #06287e; } /* Function */
+    code span.im { } /* Import */
+    code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+    code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+    code span.op { color: #666666; } /* Operator */
+    code span.ot { color: #007020; } /* Other */
+    code span.pp { color: #bc7a00; } /* Preprocessor */
+    code span.sc { color: #4070a0; } /* SpecialChar */
+    code span.ss { color: #bb6688; } /* SpecialString */
+    code span.st { color: #4070a0; } /* String */
+    code span.va { color: #19177c; } /* Variable */
+    code span.vs { color: #4070a0; } /* VerbatimString */
+    code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+  <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+  <![endif]-->
+</head>
+<body>
+<div class="cell code" data-execution_count="125">
+<div class="sourceCode" id="cb1"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> seaborn <span class="im">as</span> sns</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> re</span></code></pre></div>
+</div>
+<div class="cell code" data-execution_count="73">
+<div class="sourceCode" id="cb2"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>path <span class="op">=</span> <span class="st">&#39;https://raw.githubusercontent.com/AlexeyKamaev/test/main/_data.csv&#39;</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>df <span class="op">=</span> pd.read_csv(path)</span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>pd.set_option(<span class="st">&#39;display.max_columns&#39;</span>, <span class="va">None</span>)</span></code></pre></div>
+</div>
+<div class="cell code" data-execution_count="91">
+<div class="sourceCode" id="cb3"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>df.info()</span></code></pre></div>
+<div class="output stream stdout">
+<pre><code>&lt;class &#39;pandas.core.frame.DataFrame&#39;&gt;
+Index: 19391 entries, 0 to 23367
+Data columns (total 26 columns):
+ #   Column                    Non-Null Count  Dtype  
+---  ------                    --------------  -----  
+ 0   ID  объявления            19391 non-null  int64  
+ 1   Количество комнат         18868 non-null  object 
+ 2   Тип                       19391 non-null  object 
+ 3   Станция                   19391 non-null  object 
+ 4   Метро                     19391 non-null  object 
+ 5   Общая площадь             19391 non-null  float64
+ 6   Адрес                     19391 non-null  object 
+ 7   Площадь                   19391 non-null  object 
+ 8   Дом                       19391 non-null  object 
+ 9   Парковка                  8461 non-null   object 
+ 10  Залог                     19391 non-null  int64  
+ 11  Цена                      19391 non-null  object 
+ 12  Описание                  19391 non-null  object 
+ 13  Ремонт                    16944 non-null  object 
+ 14  Площадь комнат, м2        12306 non-null  object 
+ 15  Балкон                    12853 non-null  object 
+ 16  Окна                      14333 non-null  object 
+ 17  Санузел                   17385 non-null  object 
+ 18  Можно с детьми/животными  14560 non-null  object 
+ 19  Дополнительно             19138 non-null  object 
+ 20  Название ЖК               4411 non-null   object 
+ 21  Серия дома                2088 non-null   object 
+ 22  Высота потолков, м        10369 non-null  float64
+ 23  Лифт                      15259 non-null  object 
+ 24  Мусоропровод              11478 non-null  object 
+ 25  Цена_месяц                19391 non-null  int64  
+dtypes: float64(2), int64(3), object(21)
+memory usage: 4.0+ MB
+</code></pre>
+</div>
+</div>
+<div class="cell code" data-execution_count="161">
+<div class="sourceCode" id="cb5"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Удаление колонок Ссылка на объявление, Телефоны</span></span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>df <span class="op">=</span> df.rename(columns<span class="op">=</span>{<span class="st">&#39;Площадь, м2&#39;</span>:<span class="st">&#39;Площадь&#39;</span>}).drop(<span class="st">&#39;Ссылка на объявление&#39;</span>,axis <span class="op">=</span> <span class="dv">1</span>).drop(<span class="st">&#39;Unnamed: 0&#39;</span>,axis <span class="op">=</span> <span class="dv">1</span>).drop(<span class="st">&#39;Телефоны&#39;</span>,axis <span class="op">=</span> <span class="dv">1</span>)</span></code></pre></div>
+<div class="output error" data-ename="KeyError" data-evalue="&quot;[&#39;Ссылка на объявление&#39;] not found in axis&quot;">
+<pre><code>---------------------------------------------------------------------------
+KeyError                                  Traceback (most recent call last)
+Cell In[161], line 2
+      1 # Удаление колонок Ссылка на объявление, Телефоны
+----&gt; 2 df = df.rename(columns={&#39;Площадь, м2&#39;:&#39;Площадь&#39;}).drop(&#39;Ссылка на объявление&#39;,axis = 1).drop(&#39;Unnamed: 0&#39;,axis = 1).drop(&#39;Телефоны&#39;,axis = 1).drop(&#39;Цена_месяц&#39;, axis=1)
+
+File ~\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\pandas\core\frame.py:5344, in DataFrame.drop(self, labels, axis, index, columns, level, inplace, errors)
+   5196 def drop(
+   5197     self,
+   5198     labels: IndexLabel | None = None,
+   (...)
+   5205     errors: IgnoreRaise = &quot;raise&quot;,
+   5206 ) -&gt; DataFrame | None:
+   5207     &quot;&quot;&quot;
+   5208     Drop specified labels from rows or columns.
+   5209 
+   (...)
+   5342             weight  1.0     0.8
+   5343     &quot;&quot;&quot;
+-&gt; 5344     return super().drop(
+   5345         labels=labels,
+   5346         axis=axis,
+   5347         index=index,
+   5348         columns=columns,
+   5349         level=level,
+   5350         inplace=inplace,
+   5351         errors=errors,
+   5352     )
+
+File ~\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\pandas\core\generic.py:4711, in NDFrame.drop(self, labels, axis, index, columns, level, inplace, errors)
+   4709 for axis, labels in axes.items():
+   4710     if labels is not None:
+-&gt; 4711         obj = obj._drop_axis(labels, axis, level=level, errors=errors)
+   4713 if inplace:
+   4714     self._update_inplace(obj)
+
+File ~\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\pandas\core\generic.py:4753, in NDFrame._drop_axis(self, labels, axis, level, errors, only_slice)
+   4751         new_axis = axis.drop(labels, level=level, errors=errors)
+   4752     else:
+-&gt; 4753         new_axis = axis.drop(labels, errors=errors)
+   4754     indexer = axis.get_indexer(new_axis)
+   4756 # Case for non-unique axis
+   4757 else:
+
+File ~\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\pandas\core\indexes\base.py:7000, in Index.drop(self, labels, errors)
+   6998 if mask.any():
+   6999     if errors != &quot;ignore&quot;:
+-&gt; 7000         raise KeyError(f&quot;{labels[mask].tolist()} not found in axis&quot;)
+   7001     indexer = indexer[~mask]
+   7002 return self.delete(indexer)
+
+KeyError: &quot;[&#39;Ссылка на объявление&#39;] not found in axis&quot;
+</code></pre>
+</div>
+</div>
+<div class="cell code" data-execution_count="162">
+<div class="sourceCode" id="cb7"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>df<span class="op">=</span> df.drop(<span class="st">&#39;Цена_месяц&#39;</span>, axis<span class="op">=</span><span class="dv">1</span>)</span></code></pre></div>
+</div>
+<div class="cell code" data-execution_count="76">
+<div class="sourceCode" id="cb8"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Удаление строк, где адрес не Москва</span></span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>df <span class="op">=</span> df[df[<span class="st">&#39;Адрес&#39;</span>].<span class="bu">str</span>.contains(<span class="st">&#39;Москва&#39;</span>)]</span></code></pre></div>
+</div>
+<div class="cell code" data-execution_count="77">
+<div class="sourceCode" id="cb9"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Удаление пропусков по колонке Метро, поскольку ключевым фактором в предсказывании цены будет именно станция метро </span></span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>df <span class="op">=</span> df.dropna(subset<span class="op">=</span>[<span class="st">&#39;Метро&#39;</span>])</span></code></pre></div>
+</div>
+<section id="площаль-цена-и-станция-метро" class="cell markdown">
+<h1>Площаль, цена и станция метро</h1>
+</section>
+<div class="cell code" data-execution_count="78">
+<div class="sourceCode" id="cb10"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Получение станции метро из колонки Метро </span></span>
+<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> func (y):</span>
+<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a>    y[:y.find(<span class="st">&#39;(&#39;</span>)]</span>
+<span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> y[:y.find(<span class="st">&#39;(&#39;</span>)].strip()</span>
+<span id="cb10-5"><a href="#cb10-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-6"><a href="#cb10-6" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> func2 (y):</span>
+<span id="cb10-7"><a href="#cb10-7" aria-hidden="true" tabindex="-1"></a>    y[:y.find(<span class="st">&#39;(&#39;</span>)]</span>
+<span id="cb10-8"><a href="#cb10-8" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> y[y.find(<span class="st">&#39;м. &#39;</span>)<span class="op">+</span><span class="dv">3</span>:].strip()</span>
+<span id="cb10-9"><a href="#cb10-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-10"><a href="#cb10-10" aria-hidden="true" tabindex="-1"></a>x <span class="op">=</span> df[<span class="st">&#39;Метро&#39;</span>].<span class="bu">map</span>(func).<span class="bu">map</span>(func2).copy()</span>
+<span id="cb10-11"><a href="#cb10-11" aria-hidden="true" tabindex="-1"></a>df.insert(<span class="dv">3</span>, <span class="st">&quot;Станция&quot;</span>, x)</span></code></pre></div>
+</div>
+<div class="cell code" data-execution_count="79">
+<div class="sourceCode" id="cb11"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Обработка колонки Площадь</span></span>
+<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> operator <span class="im">import</span> methodcaller</span>
+<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> func(x):</span>
+<span id="cb11-4"><a href="#cb11-4" aria-hidden="true" tabindex="-1"></a>  <span class="cf">return</span> <span class="bu">float</span>(x[<span class="dv">0</span>])</span>
+<span id="cb11-5"><a href="#cb11-5" aria-hidden="true" tabindex="-1"></a>point_place <span class="op">=</span> df[<span class="st">&#39;Площадь&#39;</span>].<span class="bu">map</span>(methodcaller(<span class="st">&quot;split&quot;</span>, <span class="st">&quot;/&quot;</span>)).<span class="bu">map</span>(func).copy()</span>
+<span id="cb11-6"><a href="#cb11-6" aria-hidden="true" tabindex="-1"></a>df.insert(<span class="dv">5</span>, <span class="st">&quot;Общая площадь&quot;</span>,point_place)</span></code></pre></div>
+</div>
+<div class="cell code" data-execution_count="172">
+<div class="sourceCode" id="cb12"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Обработка колонки Цена</span></span>
+<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> get_price(y):</span>
+<span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a>  r <span class="op">=</span> <span class="st">&#39;&#39;</span></span>
+<span id="cb12-4"><a href="#cb12-4" aria-hidden="true" tabindex="-1"></a>  <span class="cf">for</span> i <span class="kw">in</span> y:</span>
+<span id="cb12-5"><a href="#cb12-5" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> i.isdigit():</span>
+<span id="cb12-6"><a href="#cb12-6" aria-hidden="true" tabindex="-1"></a>      r <span class="op">+=</span> i</span>
+<span id="cb12-7"><a href="#cb12-7" aria-hidden="true" tabindex="-1"></a>    <span class="cf">else</span>:</span>
+<span id="cb12-8"><a href="#cb12-8" aria-hidden="true" tabindex="-1"></a>      r <span class="op">+=</span> <span class="st">&#39; &#39;</span></span>
+<span id="cb12-9"><a href="#cb12-9" aria-hidden="true" tabindex="-1"></a>  <span class="cf">return</span> <span class="bu">int</span>(r.split()[<span class="dv">0</span>])</span>
+<span id="cb12-10"><a href="#cb12-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-11"><a href="#cb12-11" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> get_deposit(y):</span>
+<span id="cb12-12"><a href="#cb12-12" aria-hidden="true" tabindex="-1"></a>  r <span class="op">=</span> <span class="st">&#39;&#39;</span></span>
+<span id="cb12-13"><a href="#cb12-13" aria-hidden="true" tabindex="-1"></a>  <span class="cf">for</span> i <span class="kw">in</span> y:</span>
+<span id="cb12-14"><a href="#cb12-14" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> i.isdigit():</span>
+<span id="cb12-15"><a href="#cb12-15" aria-hidden="true" tabindex="-1"></a>      r <span class="op">+=</span> i</span>
+<span id="cb12-16"><a href="#cb12-16" aria-hidden="true" tabindex="-1"></a>    <span class="cf">else</span>:</span>
+<span id="cb12-17"><a href="#cb12-17" aria-hidden="true" tabindex="-1"></a>      r <span class="op">+=</span> <span class="st">&#39; &#39;</span></span>
+<span id="cb12-18"><a href="#cb12-18" aria-hidden="true" tabindex="-1"></a>  <span class="cf">try</span>:</span>
+<span id="cb12-19"><a href="#cb12-19" aria-hidden="true" tabindex="-1"></a>      <span class="cf">if</span> <span class="bu">int</span>(r.split()[<span class="dv">2</span>]) <span class="op">&lt;</span> <span class="dv">1000</span> <span class="kw">or</span> <span class="bu">int</span>(r.split()[<span class="dv">2</span>]) <span class="op">&gt;</span> <span class="bu">int</span>(r.split()[<span class="dv">0</span>]) <span class="op">*</span> <span class="dv">6</span>:</span>
+<span id="cb12-20"><a href="#cb12-20" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> <span class="bu">int</span>(r.split()[<span class="dv">0</span>])</span>
+<span id="cb12-21"><a href="#cb12-21" aria-hidden="true" tabindex="-1"></a>      <span class="cf">else</span>:</span>
+<span id="cb12-22"><a href="#cb12-22" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> <span class="bu">int</span>(r.split()[<span class="dv">2</span>])</span>
+<span id="cb12-23"><a href="#cb12-23" aria-hidden="true" tabindex="-1"></a>  <span class="cf">except</span>:</span>
+<span id="cb12-24"><a href="#cb12-24" aria-hidden="true" tabindex="-1"></a>      <span class="cf">return</span> <span class="bu">int</span>(r.split()[<span class="dv">0</span>])</span>
+<span id="cb12-25"><a href="#cb12-25" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb12-26"><a href="#cb12-26" aria-hidden="true" tabindex="-1"></a>x1 <span class="op">=</span> df[<span class="st">&#39;Цена&#39;</span>].<span class="bu">map</span>(get_price) </span>
+<span id="cb12-27"><a href="#cb12-27" aria-hidden="true" tabindex="-1"></a>x2 <span class="op">=</span> df[<span class="st">&#39;Цена&#39;</span>].<span class="bu">map</span>(get_deposit) </span>
+<span id="cb12-28"><a href="#cb12-28" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-29"><a href="#cb12-29" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-30"><a href="#cb12-30" aria-hidden="true" tabindex="-1"></a>df[<span class="st">&#39;Залог&#39;</span>] <span class="op">=</span> x2</span></code></pre></div>
+</div>
+<div class="cell code">
+<div class="sourceCode" id="cb13"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a>df.insert(<span class="dv">9</span>, <span class="st">&quot;Цена за месяц&quot;</span>,x1)</span>
+<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a>df.insert(<span class="dv">10</span>, <span class="st">&quot;Залог&quot;</span>,x2)</span></code></pre></div>
+</div>
+<section id="графики" class="cell markdown">
+<h1>Графики</h1>
+</section>
+<div class="cell code" data-execution_count="115">
+<div class="sourceCode" id="cb14"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Распределение цен</span></span>
+<span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a>fig, ax <span class="op">=</span> plt.subplots()</span>
+<span id="cb14-3"><a href="#cb14-3" aria-hidden="true" tabindex="-1"></a>ax.hist(df[<span class="st">&#39;Цена за месяц&#39;</span>], bins <span class="op">=</span> <span class="dv">40</span>, edgecolor<span class="op">=</span><span class="st">&#39;black&#39;</span>)</span>
+<span id="cb14-4"><a href="#cb14-4" aria-hidden="true" tabindex="-1"></a>ax.minorticks_on()</span>
+<span id="cb14-5"><a href="#cb14-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-6"><a href="#cb14-6" aria-hidden="true" tabindex="-1"></a>plt.title(<span class="st">&#39;Распределение цен&#39;</span>)</span>
+<span id="cb14-7"><a href="#cb14-7" aria-hidden="true" tabindex="-1"></a>plt.xlabel(<span class="st">&#39;Цена за месяц&#39;</span>)</span>
+<span id="cb14-8"><a href="#cb14-8" aria-hidden="true" tabindex="-1"></a>plt.xticks(rotation<span class="op">=</span><span class="dv">45</span>)</span>
+<span id="cb14-9"><a href="#cb14-9" aria-hidden="true" tabindex="-1"></a>plt.ticklabel_format(style<span class="op">=</span><span class="st">&#39;plain&#39;</span>, axis<span class="op">=</span><span class="st">&#39;x&#39;</span>)</span>
+<span id="cb14-10"><a href="#cb14-10" aria-hidden="true" tabindex="-1"></a>plt.xlim(<span class="dv">0</span>, <span class="dv">1000000</span>)</span>
+<span id="cb14-11"><a href="#cb14-11" aria-hidden="true" tabindex="-1"></a>plt.ylabel(<span class="st">&#39;Количество квартир&#39;</span>)<span class="op">;</span></span></code></pre></div>
+<div class="output display_data">
+<p><img src="6e9fb085d9b19d4490924fea9d82340a301920c4.png" /></p>
+</div>
+</div>
+<div class="cell markdown">
+<p>Судя по распределению цен большинство квартир находится в ценовом диапазоне до 100000 руб в месяц</p>
+</div>
+<div class="cell code" data-execution_count="109">
+<div class="sourceCode" id="cb15"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a>price_area <span class="op">=</span> df.groupby(<span class="st">&#39;Станция&#39;</span>, as_index<span class="op">=</span><span class="va">False</span>).agg({<span class="st">&#39;Общая площадь&#39;</span>:[<span class="st">&#39;count&#39;</span>,<span class="st">&#39;mean&#39;</span>],<span class="st">&#39;Цена за месяц&#39;</span>:<span class="st">&#39;mean&#39;</span>}).<span class="bu">round</span>(<span class="dv">2</span>)</span></code></pre></div>
+<div class="output execute_result" data-execution_count="109">
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead tr th {
+        text-align: left;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr>
+      <th></th>
+      <th>Станция</th>
+      <th colspan="2" halign="left">Общая площадь</th>
+      <th>Цена за месяц</th>
+    </tr>
+    <tr>
+      <th></th>
+      <th></th>
+      <th>count</th>
+      <th>mean</th>
+      <th>mean</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>Авиамоторная</td>
+      <td>107</td>
+      <td>49.06</td>
+      <td>66287.82</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>Автозаводская</td>
+      <td>57</td>
+      <td>57.43</td>
+      <td>66075.42</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>Академическая</td>
+      <td>191</td>
+      <td>62.57</td>
+      <td>76413.51</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>Александровский сад</td>
+      <td>3</td>
+      <td>252.67</td>
+      <td>410000.00</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>Алексеевская</td>
+      <td>171</td>
+      <td>58.40</td>
+      <td>72546.49</td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>272</th>
+      <td>Юго-Западная</td>
+      <td>138</td>
+      <td>74.46</td>
+      <td>82717.32</td>
+    </tr>
+    <tr>
+      <th>273</th>
+      <td>Южная</td>
+      <td>73</td>
+      <td>49.76</td>
+      <td>47273.84</td>
+    </tr>
+    <tr>
+      <th>274</th>
+      <td>Ясенево</td>
+      <td>127</td>
+      <td>50.56</td>
+      <td>46062.11</td>
+    </tr>
+    <tr>
+      <th>275</th>
+      <td>Яхромская</td>
+      <td>1</td>
+      <td>43.00</td>
+      <td>50000.00</td>
+    </tr>
+    <tr>
+      <th>276</th>
+      <td>улица Народного ополчения</td>
+      <td>41</td>
+      <td>72.60</td>
+      <td>93048.78</td>
+    </tr>
+  </tbody>
+</table>
+<p>277 rows × 4 columns</p>
+</div>
+</div>
+</div>
+<div class="cell code" data-execution_count="110">
+<div class="sourceCode" id="cb16"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a>plt.figure(figsize<span class="op">=</span>(<span class="dv">15</span>,<span class="dv">8</span>))</span>
+<span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a>sns.scatterplot(x<span class="op">=</span>price_area[(<span class="st">&#39;Общая площадь&#39;</span>, <span class="st">&#39;mean&#39;</span>)], y<span class="op">=</span>price_area[(<span class="st">&#39;Цена за месяц&#39;</span>, <span class="st">&#39;mean&#39;</span>)])</span>
+<span id="cb16-3"><a href="#cb16-3" aria-hidden="true" tabindex="-1"></a>plt.title(<span class="st">&#39;Связь цены и общей площади&#39;</span>)</span>
+<span id="cb16-4"><a href="#cb16-4" aria-hidden="true" tabindex="-1"></a>plt.xlabel(<span class="st">&#39;Общая площадь, м2&#39;</span>)</span>
+<span id="cb16-5"><a href="#cb16-5" aria-hidden="true" tabindex="-1"></a>plt.ylabel(<span class="st">&#39;Цена, руб/мес&#39;</span>)</span>
+<span id="cb16-6"><a href="#cb16-6" aria-hidden="true" tabindex="-1"></a>plt.ticklabel_format(style<span class="op">=</span><span class="st">&#39;plain&#39;</span>, axis<span class="op">=</span><span class="st">&#39;y&#39;</span>)<span class="op">;</span></span></code></pre></div>
+<div class="output display_data">
+<p><img src="d010d760bd36630f16d87bf0e778e81a6fbe7a33.png" /></p>
+</div>
+</div>
+<div class="cell markdown">
+<p>Большинство квартир имеют жилую площадь до 100 м2 и цену до 200000 руб/мес</p>
+</div>
+<div class="cell code" data-execution_count="111">
+<div class="sourceCode" id="cb17"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a>price_remont <span class="op">=</span> df.groupby(<span class="st">&#39;Ремонт&#39;</span>, as_index<span class="op">=</span><span class="va">False</span>).agg({<span class="st">&#39;Общая площадь&#39;</span>:[<span class="st">&#39;count&#39;</span>,<span class="st">&#39;mean&#39;</span>],<span class="st">&#39;Цена за месяц&#39;</span>:<span class="st">&#39;mean&#39;</span>}).<span class="bu">round</span>(<span class="dv">2</span>)</span></code></pre></div>
+<div class="output execute_result" data-execution_count="111">
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead tr th {
+        text-align: left;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr>
+      <th></th>
+      <th>Ремонт</th>
+      <th colspan="2" halign="left">Общая площадь</th>
+      <th>Цена за месяц</th>
+    </tr>
+    <tr>
+      <th></th>
+      <th></th>
+      <th>count</th>
+      <th>mean</th>
+      <th>mean</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>Без ремонта</td>
+      <td>133</td>
+      <td>58.76</td>
+      <td>60372.14</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>Дизайнерский</td>
+      <td>2746</td>
+      <td>92.06</td>
+      <td>179539.11</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>Евроремонт</td>
+      <td>6908</td>
+      <td>67.61</td>
+      <td>90521.79</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>Косметический</td>
+      <td>7157</td>
+      <td>48.44</td>
+      <td>46550.25</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
+</div>
+<div class="cell code" data-execution_count="160">
+<div class="sourceCode" id="cb18"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a>sns.scatterplot(x<span class="op">=</span>price_remont[(<span class="st">&#39;Общая площадь&#39;</span>, <span class="st">&#39;mean&#39;</span>)], y<span class="op">=</span> price_remont[(<span class="st">&#39;Цена за месяц&#39;</span>, <span class="st">&#39;mean&#39;</span>)], hue<span class="op">=</span>price_remont[<span class="st">&#39;Ремонт&#39;</span>])</span>
+<span id="cb18-2"><a href="#cb18-2" aria-hidden="true" tabindex="-1"></a>plt.title(<span class="st">&#39;Связь цены и общей площади и ремонта&#39;</span>)</span>
+<span id="cb18-3"><a href="#cb18-3" aria-hidden="true" tabindex="-1"></a>plt.xlabel(<span class="st">&#39;Общая площадь, м2&#39;</span>)</span>
+<span id="cb18-4"><a href="#cb18-4" aria-hidden="true" tabindex="-1"></a>plt.ylabel(<span class="st">&#39;Цена, руб/мес&#39;</span>)</span>
+<span id="cb18-5"><a href="#cb18-5" aria-hidden="true" tabindex="-1"></a>plt.ticklabel_format(style<span class="op">=</span><span class="st">&#39;plain&#39;</span>, axis<span class="op">=</span><span class="st">&#39;y&#39;</span>)<span class="op">;</span></span></code></pre></div>
+<div class="output display_data">
+<p><img src="8a8bf47f49e69dda55ee5e57435fdfd4d37633ed.png" /></p>
+</div>
+</div>
+<div class="cell markdown">
+<p>Дизайнерский ремонт самый дорогой</p>
+</div>
+<div class="cell code" data-execution_count="143">
+<div class="sourceCode" id="cb19"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a>temp <span class="op">=</span> df.groupby(<span class="st">&#39;AdmArea&#39;</span>, as_index<span class="op">=</span><span class="va">False</span>).agg({<span class="st">&#39;Общая площадь&#39;</span>:<span class="st">&#39;mean&#39;</span>,<span class="st">&#39;Цена за месяц&#39;</span>:<span class="st">&#39;mean&#39;</span>}).<span class="bu">round</span>(<span class="dv">2</span>)</span>
+<span id="cb19-2"><a href="#cb19-2" aria-hidden="true" tabindex="-1"></a>temp</span>
+<span id="cb19-3"><a href="#cb19-3" aria-hidden="true" tabindex="-1"></a>plt.figure(figsize<span class="op">=</span>(<span class="dv">15</span>,<span class="dv">5</span>))</span>
+<span id="cb19-4"><a href="#cb19-4" aria-hidden="true" tabindex="-1"></a>sns.scatterplot(x<span class="op">=</span>temp[<span class="st">&#39;AdmArea&#39;</span>], y<span class="op">=</span>temp[<span class="st">&#39;Цена за месяц&#39;</span>], hue<span class="op">=</span>temp[<span class="st">&#39;Общая площадь&#39;</span>])</span>
+<span id="cb19-5"><a href="#cb19-5" aria-hidden="true" tabindex="-1"></a>plt.xticks(rotation<span class="op">=</span><span class="dv">90</span>)<span class="op">;</span></span></code></pre></div>
+<div class="output display_data">
+<p><img src="991992189836abd1b557bdc35f24f0fb38f51e5e.png" /></p>
+</div>
+</div>
+<div class="cell markdown">
+<p>Самые дорогие и просторные квартиры находятся в Центральном административном округе</p>
+</div>
+<div class="cell code" data-execution_count="128">
+<div class="sourceCode" id="cb20"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a><span class="co">#Функция для нахождения первого числа в строке</span></span>
+<span id="cb20-2"><a href="#cb20-2" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> first_element(x):</span>
+<span id="cb20-3"><a href="#cb20-3" aria-hidden="true" tabindex="-1"></a>    y <span class="op">=</span> re.findall(<span class="vs">r&#39;\d+&#39;</span>, x)</span>
+<span id="cb20-4"><a href="#cb20-4" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> y[<span class="dv">0</span>]</span>
+<span id="cb20-5"><a href="#cb20-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb20-6"><a href="#cb20-6" aria-hidden="true" tabindex="-1"></a>df[<span class="st">&#39;Этаж&#39;</span>] <span class="op">=</span> df[<span class="st">&#39;Дом&#39;</span>].<span class="bu">apply</span>(first_element).astype(<span class="st">&#39;int&#39;</span>)</span>
+<span id="cb20-7"><a href="#cb20-7" aria-hidden="true" tabindex="-1"></a>x <span class="op">=</span> df.groupby(<span class="st">&#39;Этаж&#39;</span>).agg({<span class="st">&#39;Цена за месяц&#39;</span>: <span class="st">&#39;mean&#39;</span>}).sort_index().index</span>
+<span id="cb20-8"><a href="#cb20-8" aria-hidden="true" tabindex="-1"></a>y <span class="op">=</span> df.groupby(<span class="st">&#39;Этаж&#39;</span>).agg({<span class="st">&#39;Цена за месяц&#39;</span>: <span class="st">&#39;mean&#39;</span>}).sort_index()[<span class="st">&#39;Цена за месяц&#39;</span>]</span>
+<span id="cb20-9"><a href="#cb20-9" aria-hidden="true" tabindex="-1"></a>fig <span class="op">=</span> plt.figure(figsize <span class="op">=</span> (<span class="dv">30</span>, <span class="dv">20</span>))</span>
+<span id="cb20-10"><a href="#cb20-10" aria-hidden="true" tabindex="-1"></a>plt.plot(x, y)</span>
+<span id="cb20-11"><a href="#cb20-11" aria-hidden="true" tabindex="-1"></a>plt.xlabel(<span class="st">&#39;Этаж&#39;</span>)</span>
+<span id="cb20-12"><a href="#cb20-12" aria-hidden="true" tabindex="-1"></a>plt.ylabel(<span class="st">&#39;Цена за месяц&#39;</span>)<span class="op">;</span></span></code></pre></div>
+<div class="output display_data">
+<p><img src="a592640fb2b3f989571483bf9435450fe9a73929.png" /></p>
+</div>
+</div>
+<div class="cell markdown">
+<p>С увеличением номера этажа средняя цена увеличивается</p>
+</div>
+<div class="cell code" data-execution_count="144">
+<div class="sourceCode" id="cb21"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a>metro <span class="op">=</span> pd.read_csv(<span class="st">&#39;C:/Users/Angalan/repositories/out.csv&#39;</span>, sep<span class="op">=</span><span class="st">&#39;,&#39;</span>)</span>
+<span id="cb21-2"><a href="#cb21-2" aria-hidden="true" tabindex="-1"></a>metro <span class="op">=</span> metro.rename(columns<span class="op">=</span>{<span class="st">&#39;Station&#39;</span>:<span class="st">&#39;Станция&#39;</span>}).drop_duplicates(<span class="st">&#39;Станция&#39;</span>).loc[:,<span class="st">&#39;Станция&#39;</span>:<span class="st">&#39;District&#39;</span>]</span>
+<span id="cb21-3"><a href="#cb21-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb21-4"><a href="#cb21-4" aria-hidden="true" tabindex="-1"></a>df <span class="op">=</span> df.merge(metro, how <span class="op">=</span> <span class="st">&#39;left&#39;</span>, on<span class="op">=</span><span class="st">&#39;Станция&#39;</span>)</span></code></pre></div>
+</div>
+<div class="cell code" data-execution_count="153">
+<div class="sourceCode" id="cb22"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a><span class="co">#Функция для нахождения второго числа в строке</span></span>
+<span id="cb22-2"><a href="#cb22-2" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> second_element(x):</span>
+<span id="cb22-3"><a href="#cb22-3" aria-hidden="true" tabindex="-1"></a>    y <span class="op">=</span> re.findall(<span class="vs">r&#39;\d+&#39;</span>, x)</span>
+<span id="cb22-4"><a href="#cb22-4" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> y[<span class="dv">1</span>]</span>
+<span id="cb22-5"><a href="#cb22-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb22-6"><a href="#cb22-6" aria-hidden="true" tabindex="-1"></a>df[<span class="st">&#39;Этажность дома&#39;</span>] <span class="op">=</span> df[<span class="st">&#39;Дом&#39;</span>].<span class="bu">apply</span>(second_element).astype(<span class="st">&#39;int&#39;</span>)</span>
+<span id="cb22-7"><a href="#cb22-7" aria-hidden="true" tabindex="-1"></a>x <span class="op">=</span> df.groupby(<span class="st">&#39;Этажность дома&#39;</span>).agg({<span class="st">&#39;Цена за месяц&#39;</span>: <span class="st">&#39;mean&#39;</span>}).sort_index().index</span>
+<span id="cb22-8"><a href="#cb22-8" aria-hidden="true" tabindex="-1"></a>y <span class="op">=</span> df.groupby(<span class="st">&#39;Этажность дома&#39;</span>).agg({<span class="st">&#39;Цена за месяц&#39;</span>: <span class="st">&#39;mean&#39;</span>}).sort_index()[<span class="st">&#39;Цена за месяц&#39;</span>]</span>
+<span id="cb22-9"><a href="#cb22-9" aria-hidden="true" tabindex="-1"></a>fig <span class="op">=</span> plt.figure(figsize <span class="op">=</span> (<span class="dv">30</span>, <span class="dv">20</span>))</span>
+<span id="cb22-10"><a href="#cb22-10" aria-hidden="true" tabindex="-1"></a>plt.bar(x, y)</span>
+<span id="cb22-11"><a href="#cb22-11" aria-hidden="true" tabindex="-1"></a>plt.xlabel(<span class="st">&#39;Этажность дома&#39;</span>)</span>
+<span id="cb22-12"><a href="#cb22-12" aria-hidden="true" tabindex="-1"></a>plt.ylabel(<span class="st">&#39;Цена за месяц&#39;</span>)</span>
+<span id="cb22-13"><a href="#cb22-13" aria-hidden="true" tabindex="-1"></a>plt.xlim(<span class="dv">1</span>, <span class="dv">30</span>)</span>
+<span id="cb22-14"><a href="#cb22-14" aria-hidden="true" tabindex="-1"></a>plt.ylim(<span class="dv">0</span>, <span class="dv">300000</span>)<span class="op">;</span></span></code></pre></div>
+<div class="output execute_result" data-execution_count="153">
+<pre><code>(0.0, 300000.0)</code></pre>
+</div>
+<div class="output display_data">
+<p><img src="f7097aea8174db152f3672964f58143180d70eef.png" /></p>
+</div>
+</div>
+<div class="cell markdown">
+<p>От 60 этажей - Москва Сити, от 5 до 30 этажей - средний ценовой сегмент</p>
+</div>
+<div class="cell code" data-execution_count="173">
+<div class="sourceCode" id="cb24"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb24-1"><a href="#cb24-1" aria-hidden="true" tabindex="-1"></a>numeric_columns <span class="op">=</span> df.select_dtypes(include<span class="op">=</span><span class="st">&#39;number&#39;</span>)</span>
+<span id="cb24-2"><a href="#cb24-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb24-3"><a href="#cb24-3" aria-hidden="true" tabindex="-1"></a>correlation_matrix <span class="op">=</span> numeric_columns.corr()</span>
+<span id="cb24-4"><a href="#cb24-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb24-5"><a href="#cb24-5" aria-hidden="true" tabindex="-1"></a>plt.figure(figsize<span class="op">=</span>(<span class="dv">8</span>, <span class="dv">6</span>))</span>
+<span id="cb24-6"><a href="#cb24-6" aria-hidden="true" tabindex="-1"></a>sns.heatmap(correlation_matrix, annot<span class="op">=</span><span class="va">True</span>, cmap<span class="op">=</span><span class="st">&#39;coolwarm&#39;</span>)</span>
+<span id="cb24-7"><a href="#cb24-7" aria-hidden="true" tabindex="-1"></a>plt.title(<span class="st">&#39;Тепловая карта корреляций числовых переменных&#39;</span>)<span class="op">;</span></span></code></pre></div>
+<div class="output display_data">
+<p><img src="5500ab9018b746e75ccc633f6fe90d73a904ac8f.png" /></p>
+</div>
+</div>
+<div class="cell code">
+<div class="sourceCode" id="cb25"><pre class="sourceCode python"><code class="sourceCode python"></code></pre></div>
+</div>
+</body>
+</html>
