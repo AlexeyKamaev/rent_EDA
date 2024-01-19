@@ -42,7 +42,3 @@
 📝 https://habr.com/ru/post/511132/
 Нормировка
 📝 https://habr.com/ru/post/527334/
-
-
-
-README.md добавлены основные выводы и иллюстрации
