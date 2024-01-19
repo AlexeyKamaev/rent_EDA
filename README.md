@@ -9,9 +9,9 @@
 - [Команда проекта](#команда-проекта)
 
 ## Технологии
-- [Python](https://www.gatsbyjs.com/)
-- [Pandas](https://www.gatsbyjs.com/)
-- [Seaborn](https://www.typescriptlang.org/)
+- [Python](https://www.python.org/)
+- [Pandas](https://pandas.pydata.org/)
+- [Seaborn](https://seaborn.pydata.org/)
 
 
 ## Contributing
@@ -35,10 +35,17 @@
 Чем мы вдохновлялись, чтобы справиться с заданием:
 
 "Почистить" данные от NaN
+
 📝 https://loginom.ru/blog/missing
+
 📝 https://pythobyte.com/python-how-to-handle-missing-dataframe-values-in-pandas-d56af629/
+
 Обработать категориальные данные
+
 📝 https://dyakonov.org/2016/08/03/python-категориальные-признаки/
+
 📝 https://habr.com/ru/post/511132/
+
 Нормировка
+
 📝 https://habr.com/ru/post/527334/
